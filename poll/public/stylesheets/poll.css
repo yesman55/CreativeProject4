@@ -1,0 +1,17 @@
+img{
+    width:80%;
+  }
+  .row{
+    text-align:center;
+  }
+  h1{
+    text-align:center;
+    font-weight:bold; 
+  }
+  #apple{
+    margin-top:70px;
+  }
+  #directions{
+    text-align:center;
+    margin:30px;
+  }

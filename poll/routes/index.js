@@ -10,7 +10,6 @@ router.get('/', function(req, res) {
 });
 
 router.get('/OS', function(req, res) {
-  console.log("In Poll");
   res.send(OS);
 });
 
@@ -24,14 +23,14 @@ router.get('/MacOS_poll', function(req,res) {
   console.log("In MacOS_poll");
   OS[3]++;
   console.log("MacOS votes: " + OS[3]);
-  res.send(OS[3]);
+  res.send(OS[3].toString());
 });
 
 router.get('/Linux_poll', function(req,res) {
   console.log("In Linux_poll");
   OS[5]++;
   console.log("Linux votes: " + OS[5]);
-  res.send(OS[5]);
+  res.send(OS[5].toString());
 });
 
 // router.post('/pokemon', function(req, res) {

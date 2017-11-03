@@ -1,22 +1,3 @@
-// var app = window.angular.module('app', []);
-// app.controller('mainCtrl', function($scope, $http) {
-
-//   $scope.addvote = function(OS_system) {
-// 	if(OS_system == "Windows"){
-//           $http.get('Windows_poll')
-// 	  .then(function(res) {
-//  	    $scope.WindowsVote = res.data;
-// 	  });
-//   	}
-// 	if(OS_system == "MacOS"){
-	
-// 	}
-// 	if(OS_system == "Linux"){
-  	
-// 	}
-// }
-// });
-
 var app = window.angular.module('app', [])
 
 app.factory('osfetcher', osfetcher)
@@ -52,13 +33,21 @@ function mainCtrl ($scope, osfetcher, $http, $interval) {
     }, 800);
 
     $scope.addVoteWindows = function() {
-        console.log("Click");
         $http.get("Windows_poll") 
         .then(function(response) {
             $scope.WindowsVotes = response.data;            
         });
     }
-    
-    
+      $scope.addVoteMacOS = function() {
+        $http.get("MacOS_poll") 
+        .then(function(response) {
+            $scope.MacOSVotes = response.data;            
+        });
+    }
+      $scope.addVoteLinux = function() {
+        $http.get("Linux_poll") 
+        .then(function(response) {
+            $scope.LinuxVotes = response.data;            
+        });
+    }   
 }
-
